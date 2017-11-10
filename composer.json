@@ -1,0 +1,23 @@
+{
+    "name": "sellastica/http",
+	"type": "project",
+	"homepage": "https://github.com/sellastica/http",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Tomáš Krejčí",
+            "homepage": "http://www.sellastica.com"
+        }
+    ],
+	"require": {
+		"php": ">=7.1",
+		"nette/nette": "^v2.4.0"
+	},
+	"require-dev": {
+    },
+	"autoload": {
+        "psr-4": {
+            "Sellastica\\Http\\": "src/"
+        }
+    }
+}
