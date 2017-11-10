@@ -156,13 +156,3 @@ class UrlHandler
 		return clone $this->router->match(new Nette\Http\Request($this->url));
 	}
 }
-
-
-interface IUrlHandlerFactory
-{
-	/**
-	 * @param Nette\Http\UrlScript $url
-	 * @return UrlHandler
-	 */
-	public function create(Nette\Http\UrlScript $url);
-}
