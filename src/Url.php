@@ -1,5 +1,5 @@
 <?php
-namespace Core\Domain\Model\Http;
+namespace Sellastica\Http;
 
 use Nette;
 
