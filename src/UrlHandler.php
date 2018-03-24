@@ -153,6 +153,7 @@ class UrlHandler
 	{
 		$this->url->setScriptPath('/');
 		//must clone otherwise every time the same instance is returned!
-		return clone $this->router->match(new Nette\Http\Request($this->url));
+		$appRequest = $this->router->match(new Nette\Http\Request($this->url));
+		return $appRequest ? clone $appRequest : null;
 	}
 }
