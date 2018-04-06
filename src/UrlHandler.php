@@ -24,7 +24,7 @@ class UrlHandler
 	{
 		$this->url = $url;
 		$this->router = $router;
-		$this->appRequest = $this->getAppRequest();
+		$this->appRequest = $this->createAppRequest();
 	}
 
 	/**
@@ -33,6 +33,14 @@ class UrlHandler
 	public function getUrl(): Nette\Http\UrlScript
 	{
 		return $this->url;
+	}
+
+	/**
+	 * @return \Nette\Application\Request|NULL
+	 */
+	public function getAppRequest(): ?\Nette\Application\Request
+	{
+		return $this->appRequest;
 	}
 
 	/**
@@ -149,7 +157,7 @@ class UrlHandler
 	/**
 	 * @return Nette\Application\Request|NULL
 	 */
-	private function getAppRequest()
+	private function createAppRequest()
 	{
 		$this->url->setScriptPath('/');
 		//must clone otherwise every time the same instance is returned!
