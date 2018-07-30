@@ -10,8 +10,7 @@
         }
     ],
 	"require": {
-		"php": ">=7.1",
-		"nette/nette": "^v2.4.0"
+		"php": ">=7.1"
 	},
 	"require-dev": {
     },
